@@ -64,6 +64,7 @@ uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length)
 		*(dst+i)=*(temp+i);
 	}
 	
+	free_words((uint32_t *)temp);
 	return dst;
 }
 
