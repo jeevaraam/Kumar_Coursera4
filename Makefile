@@ -96,10 +96,10 @@ build: $(DEBS) $(TARGET).out
 
 $(TARGET).out:$(OBJS) 
 	$(CC) $(INCLUDES) $(OBJS) $(CFLAGS) $(LDFLAGS) -o $@
-	$(DMP) $(TARGET).out
+	$(DMP) $(TARGET).out > $(TARGET).asm
 	size $(TARGET).out 
 	
 #Cleans the compiler generated files in the folder
 .PHONY: clean
 clean:
-	rm -f $(OBJS) $(TARGET).out $(TARGET).map $(SOURCES:.c=.i) $(SOURCES:.c=.asm) $(SOURCES:.c=.d)
+	rm -f $(OBJS) $(TARGET).out $(TARGET).map $(TARGET).asm $(SOURCES:.c=.i) $(SOURCES:.c=.asm) $(SOURCES:.c=.d)
