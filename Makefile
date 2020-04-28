@@ -9,7 +9,7 @@
 #
 #*****************************************************************************
 #  @Author Jeevaraam Kumar
-#  @Date April 16 2020
+#  @Date April 28 2020
 #------------------------------------------------------------------------------
 # Makefile to Compile executable for Two different platforms using Command Line Argument Input
 #
@@ -43,7 +43,7 @@ ARCH = thumb
 SPECS = nosys.specs
 
 #Common Flags
-TARGET = c1m2
+TARGET = course1
 CPPFLAGS = -D$(PLATFORM) -DVERBOSE -DCOURSE1
 FLAGS = -Wall -Werror -g -O0 -std=c99
 

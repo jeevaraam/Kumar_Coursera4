@@ -15,11 +15,11 @@
  * This file contains the main code for the C1 Final assessment. 
  *
  * @author Jeevaraam Kumar
- * @date April 15 2020
+ * @date April 28 2020
  *
  */
-#include "platform.h"
-#include "memory.h"
+ 
+#include <stdint.h>
 #include "course1.h"
 
 #define MAX_LENGTH (10)

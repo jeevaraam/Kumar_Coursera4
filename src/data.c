@@ -10,7 +10,6 @@
  */
 
 #include "data.h"
-#include "memory.h"
 
 uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base)
 {
@@ -56,20 +55,20 @@ uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base)
 
 int32_t my_atoi(uint8_t * ptr, uint8_t digits, uint32_t base)
 {
-	int i=0,negative=0,val=0,power=1;
+	int i=0,negative=0,val=0,power=1,start=0;
 	int32_t data=0;
 	
 	if(*ptr=='-')
 	{
 		negative=1;
-		ptr++;
+		start=1;
 	}
 	
-	for(i=digits-1;i>=0;i--)
+	for(i=digits-2;i>=start;i--)
 	{
 		if(*(ptr+i)>='0' && *(ptr+i)<'9')
 		{
-			val = *(ptr+i);
+			val = *(ptr+i) - '0';
 		}
 		else
 		{
@@ -80,6 +79,10 @@ int32_t my_atoi(uint8_t * ptr, uint8_t digits, uint32_t base)
         power = power * base;		
 	}
 	
+	if(negative==1)
+	{
+		data=-data;
+	}
 	return data;
 	
 }

@@ -10,7 +10,7 @@
 #*****************************************************************************
 
 # Source File Variable
-SOURCES = main.c memory.c data.c stats.c course1.c
+SOURCES = src/main.c src/memory.c src/data.c src/stats.c src/course1.c
 
 # Include Paths (Platform Specific)
 

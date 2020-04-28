@@ -17,9 +17,10 @@
  * allocated buffer array used for manipulation.
  *
  * @author Jeevaraam Kumar
- * @date April 16 2020
+ * @date April 28 2020
  *
  */
+ 
 #include "memory.h"
 
 /***********************************************************
@@ -98,15 +99,14 @@ uint8_t * my_memzero(uint8_t * src, size_t length)
 uint8_t * my_reverse(uint8_t * src, size_t length)
 {
 	uint8_t *start,*end,temp;
-	int i;
 	
 	start=src;
 	end = src+length-1;
-	
+
 	while(start<end)
 	{
-		temp=*src;
-		*src=*end;
+		temp=*start;
+		*start=*end;
 		*end=temp;
 		start++;
 		end--;
@@ -120,7 +120,7 @@ int32_t * reserve_words(size_t length)
 	return (int32_t*)malloc(length*sizeof(int32_t));
 }
 
-void free_words(int32_t * src)
+void free_words(uint32_t * src)
 {
 	free(src);
 }
