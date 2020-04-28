@@ -10,12 +10,12 @@
 #*****************************************************************************
 
 # Source File Variable
-SOURCES = main.c memory.c
+SOURCES = main.c memory.c data.c stats.c course1.c
 
 # Include Paths (Platform Specific)
 
 ifeq ($(PLATFORM),MSP432)
-	INCLUDES = -I../include/common -I../include/msp432 -I../include/CMSIS
+	INCLUDES = -Iinclude/common -Iinclude/msp432 -Iinclude/CMSIS
 else
-	INCLUDES = -I../include/common
+	INCLUDES = -Iinclude/common
 endif

@@ -37,7 +37,7 @@ PLATFORM ?= HOST
 
 # Architectures Specific Flags
 
-LINKER_FILE = ../msp432p401r.lds
+LINKER_FILE = msp432p401r.lds
 CPU = cortex-m4
 ARCH = thumb
 SPECS = nosys.specs
@@ -53,7 +53,7 @@ ifeq ($(PLATFORM),MSP432)
 	CC = arm-none-eabi-gcc
 	LD = arm-none-eabi-ld
 	LDFLAGS = -Wl,-Map=$(TARGET).map -T $(LINKER_FILE)
-	CFLAGS = $(CPPFLAGS) -mcpu=$(CPU) -m$(ARCH) -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 -mfpu=fpv4-sp-d16 --specs=$(SPECS) $(FLAGS)
+	CFLAGS = $(CPPFLAGS) -mcpu=$(CPU) -m$(ARCH) -march=armv7e-m -mfloat-abi=hard -mfpu=fpv4-sp-d16 --specs=$(SPECS) $(FLAGS)
 	DMP = arm-none-eabi-objdump -d
 else
 	#FLAGS for HOST
