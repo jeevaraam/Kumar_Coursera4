@@ -46,10 +46,10 @@ void print_array(unsigned char arr[],int length)
 	for(i=0;i<length;i++)
 	{
                 if(!(i%8))
-                   printf("\n");
-		printf("%d\t",arr[i]);
+                   PRINTF("\n");
+		PRINTF("%d\t",arr[i]);
 	}
-        printf("\n");
+        PRINTF("\n");
 	#endif
 }
 
