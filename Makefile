@@ -44,7 +44,7 @@ SPECS = nosys.specs
 
 #Common Flags
 TARGET = c1m2
-CPPFLAGS = -D$(PLATFORM)
+CPPFLAGS = -D$(PLATFORM) -DVERBOSE -DCOURSE1
 FLAGS = -Wall -Werror -g -O0 -std=c99
 
 # Compiler Flags and Defines
