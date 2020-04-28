@@ -10,11 +10,9 @@
  *****************************************************************************/
 /**
  * @file main.c
- * @brief Main entry point to the C1M2 Assessment
+ * @brief Main entry point to the C1 Final Assessment
  *
- * This file contains the main code for the C1M2 assesment. Students
- * are not to change any of the code, they are instead supposed to compile
- * these files with their makefile.
+ * This file contains the main code for the C1 Final assessment. 
  *
  * @author Jeevaraam Kumar
  * @date April 15 2020
